@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import "./App.css";
-import { Boogiedml, Navbar } from "./containers";
-import { darkMode, lightMode } from "./redux/features/themeSlice";
+import { About, Boogiedml, Footer, Navbar, Skills } from "./containers";
+// import { darkMode, lightMode } from "./redux/features/themeSlice";
 import { useEffect } from "react";
+import { Clock } from "./components";
 
 function App() {
   const { theme } = useSelector((state) => state.theme);
@@ -34,13 +35,18 @@ function App() {
       "url(https://kawsar.design/wp-content/uploads/2023/02/BG-Tx-1.svg)",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover,",
+    backgroundSize: "cover",
+    backgroundAttachment: `${window.innerWidth <= 1024 ? "" : "fixed"}`,
   };
 
   return (
-    <div style={backgroundStyles}>
+    <div style={backgroundStyles} className="relative">
       <Navbar />
       <Boogiedml />
+      <About />
+      <Skills />
+      <Footer />
+      <Clock />
     </div>
   );
 }

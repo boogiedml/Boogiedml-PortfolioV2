@@ -4,10 +4,10 @@ import {
   TbBrandInstagram,
   TbBrandTwitter,
 } from "react-icons/tb";
-import { FiLinkedin } from "react-icons/fi";
+import { FiLinkedin, FiPhoneCall } from "react-icons/fi";
 
 const SocialMedia = () => (
-  <div className="w-fit hidden md:flex flex-col gap-6 text-gray-600 dark:text-[#9A9A9A] absolute bottom-10 left-16">
+  <div className="w-fit hidden md:flex flex-col gap-6 text-gray-600 dark:text-[#9A9A9A] absolute bottom-10 left-8 lg:left-12 xl:left-16">
     <a
       href="https://github.com/boogiedml"
       className="hover:text-white transition-all duration-300"
@@ -36,12 +36,20 @@ const SocialMedia = () => (
       </div>
     </a>
     <a
-      href="https://facebook.com/sherifdeen.ishola.3"
+      href=""
       className="hover:text-white transition-all duration-300"
       target="_blank"
     >
       <div>
         <FiLinkedin size={20} />
+      </div>
+    </a>
+    <a
+      href="tel:+2348158121780"
+      className="hover:text-white transition-all duration-300"
+    >
+      <div>
+        <FiPhoneCall size={20} />
       </div>
     </a>
   </div>
