@@ -1,14 +1,19 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import "./App.css";
-import { About, Boogiedml, Footer, Navbar, Skills } from "./containers";
-// import { darkMode, lightMode } from "./redux/features/themeSlice";
+import {
+  About,
+  Boogiedml,
+  Footer,
+  Navbar,
+  Projects,
+  Skills,
+} from "./containers";
 import { useEffect } from "react";
-import { Clock } from "./components";
+import { Clock, SkillsSlide } from "./components";
 
 function App() {
   const { theme } = useSelector((state) => state.theme);
-  // const dispatch = useDispatch();
 
   useEffect(() => {
     if (theme === "dark") {
@@ -18,19 +23,8 @@ function App() {
     }
   }, [theme]);
 
-  // useEffect(() => {
-  //   if (
-  //     theme === "dark" &&
-  //     window.matchMedia("(prefers-color-scheme: dark)").matches
-  //   ) {
-  //     dispatch(darkMode());
-  //   } else {
-  //     dispatch(lightMode());
-  //   }
-  // }, []);
-
   const backgroundStyles = {
-    backgroundColor: `${theme === "dark" ? "#161616" : "#e3e3e3"}`,
+    backgroundColor: `${theme === "dark" ? "#161616" : "#F9F9F9"}`,
     backgroundImage:
       "url(https://kawsar.design/wp-content/uploads/2023/02/BG-Tx-1.svg)",
     backgroundPosition: "center center",
@@ -45,6 +39,8 @@ function App() {
       <Boogiedml />
       <About />
       <Skills />
+      <SkillsSlide />
+      <Projects />
       <Footer />
       <Clock />
     </div>

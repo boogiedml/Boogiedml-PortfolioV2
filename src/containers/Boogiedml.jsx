@@ -28,25 +28,34 @@ const Boogiedml = () => {
         />
       </div>
       <div>
-        <p className="text-[#9A9A9A] md:hidden">Hi, I’m Sherifdeen 👋🏾</p>
+        <p className="text-[#CCF381] dark:text-[#9A9A9A] md:hidden">
+          Hi, I’m Sherifdeen 👋🏾
+        </p>
       </div>
-      <div className="absolute hidden md:block -top-14 lg:-top-6 -left-32 lg:-left-64 w-72 lg:w-96 px-5 py-3 text-left font-outfit text-base bg-[#1A1A1A] text-[#9A9A9A] border-[1px] border-[#242424]">
+      <div className="absolute hidden md:block -top-14 lg:-top-6 -left-32 lg:-left-64 w-72 lg:w-96 px-5 py-3 text-left font-outfit text-base bg-[#CCF381] border-[#CCF381] text-[#4732D3] dark:bg-[#1A1A1A] dark:text-[#9A9A9A] border-[1px] dark:border-[#242424]">
         <p>
           Sherifdeen Ishola Web Developer Based in Nigeria. A Software Developer
-          with entry- level experience, specializing in user interface design,
-          application development, data security, and continuous improvement.
+          with entry- level experience, specializing in{" "}
+          <span className=" underline underline-offset-2 dark:decoration-transparent dark:text-white">
+            user interface design
+          </span>
+          , application development, data security, and continuous improvement.
         </p>
       </div>
       <div>
-        <h3 className="text-2xl md:text-3xl lg:text-4xl font-outfit font-normal leading-tight bg-gradient-to-r from-[#9A9A9A] to-zinc-700 bg-clip-text text-transparent">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-outfit font-normal leading-tight bg-gradient-to-r from-[#CCF381] dark:from-[#9A9A9A] to-white dark:to-zinc-700 bg-clip-text text-transparent">
           Creating exceptional digital products, brands, and user experiences.
         </h3>
       </div>
       <div className="mt-20 md:mt-4">
-        <ButtonLink text="Download Resume" onClick={handleResumeDownload} styles="mx-auto" />
+        <ButtonLink
+          text="Download Resume"
+          onClick={handleResumeDownload}
+          styles="mx-auto bg-transparent border-[#CCF381] text-[#CCF381]"
+        />
       </div>
     </div>
   );
 };
 
-export default AppWrap(Boogiedml, "Boogiedml");
+export default AppWrap(Boogiedml, "boogiedml");

@@ -1,28 +1,33 @@
 import React from "react";
-import { ButtonLink, CopyRight } from "../components";
-import { TbMail } from "react-icons/tb";
+import { CopyRight, Link } from "../components";
 
 const Footer = () => {
   return (
-    <section>
-      <div className="py-4 mx-4 sm:mx-8 md:mx-8]16 lg:mx-24 xl:mx-36">
-        <hr className="border-t-0 border-l-0 border-r-0 border-b-[1.5px] border-[#242424]" />
+    <section className="bg-[#3D155F] dark:bg-transparent">
+      <div className="py-4 mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-36">
+        <hr className="hidden dark:block border-t-0 border-l-0 border-r-0 border-b-[1.5px] border-[#242424]" />
       </div>
-      <div className="mx-4 sm:mx-8 md:mx-8]16 lg:mx-24 xl:mx-36 my-28 text-center">
-        <h3 className="text-4xl md:text-5xl lg:text-6xl max-w-lg mx-auto font-outfit font-normal leading-tight bg-gradient-to-r from-[#9A9A9A] to-zinc-700 bg-clip-text text-transparent">
-          Tell me about your next project
-        </h3>
-        <div className="mt-16 mx-auto">
-          <ButtonLink
-            link="/"
-            text="Get in touch"
-            icon={<TbMail />}
-            styles="mx-auto"
+      <div className="flex flex-col sm:flex-row sm:items-end gap-20 sm:gap-40 md:gap-56 mx-4 sm:mx-8 md:mx-8]16 lg:mx-24 xl:mx-36 my-28">
+        <div className="flex flex-col gap-6 w-fit">
+          <h4 className="text-[#cbc9e2] dark:text-[#CCF381] text base md:text-md xl:text-lg leading-10 tracking-[0.25em] font-light">
+            SAY HELLO
+          </h4>
+          <Link
+            text="hello@boogiedml.dev"
+            link="mailto:isholasherifdeen@gmail.com"
+          />
+          <Link
+            text="t.me/boogiedml"
+            link="mailto:isholasherifdeen@gmail.com"
           />
         </div>
+        <div className="h-fit flex flex-col gap-6">
+          <Link text="My Work" link="mailto:isholasherifdeen@gmail.com" />
+          <Link text="My Résumé" link="mailto:isholasherifdeen@gmail.com" />
+        </div>
       </div>
-      <div className="py-4 mx-4 sm:mx-8 md:mx-8]16 lg:mx-24 xl:mx-36">
-        <hr className="border-t-0 border-l-0 border-r-0 border-b-[1.5px] border-[#242424]" />
+      <div className="py-4 mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-36">
+        <hr className="border-t-0 border-l-0 border-r-0 border-b-[0.5px] dark:border-b-[1.5px] border-[#CCF381] dark:border-[#242424]" />
       </div>
       <div className="py-4 mx-4 sm:mx-8 md:mx-8]16 lg:mx-24 xl:mx-36 flex flex-col-reverse md:flex-row justify-between">
         <CopyRight />

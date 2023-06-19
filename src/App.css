@@ -15,3 +15,10 @@
   user-select: none;
   font-weight: 500;
 }
+
+.cloud_skillLight {
+  color: #F9F9F9;
+  z-index: -1;
+  user-select: none;
+  font-weight: 500;
+}

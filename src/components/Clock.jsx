@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Clock = () => {
   const [currentTime, setCurrentTime] = useState("");
@@ -21,9 +22,12 @@ const Clock = () => {
   }, []);
 
   return (
-    <div className="w-[150px] fixed text-center z-40 -rotate-90 top-1/2 -right-14 transform -translate-y-1/2 font-outfit text-sm bg-[#9A9A9A] dark:bg-[#1A1A1A] dark:text-[#9A9A9A] border-[1px] border-[#242424] py-3 cursor-default">
-      {currentTime}
-    </div>
+    <main className="w-[150px] fixed z-40 -rotate-90 top-1/2 -right-14 transform -translate-y-1/2 bg-[#CCF381] border-[#4732D3] text-[#4732D3] dark:bg-[#1A1A1A] dark:text-[#9A9A9A] border-[1px] dark:border-[#242424] py-3 cursor-default">
+      <div className="w-fit flex items-center gap-3 mx-auto">
+        <div className="font-outfit text-sm">{currentTime}</div>
+        <ThemeToggle />
+      </div>
+    </main>
   );
 };
 

@@ -19,9 +19,7 @@ const ThemeToggle = ({ styles }) => {
   return (
     <div
       onClick={handleToggleTheme}
-      className={`${styles} cursor-pointer dark:text-white hover:text-[#cc9e6c] dark:hover:text-[#cc9e6c] transition-all duration-500 transform ${
-        theme === "dark" ? "rotate-0" : " rotate-180"
-      }`}
+      className={`${styles} cursor-pointer text-[#4732D3] dark:text-white hover:rotate-45 dark:hover:text-[#CCF381] transition-all duration-500 transform`}
     >
       {theme === "dark" ? <HiSun size={23} /> : <HiMoon size={23} />}
     </div>

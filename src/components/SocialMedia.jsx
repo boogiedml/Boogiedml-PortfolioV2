@@ -6,8 +6,16 @@ import {
 } from "react-icons/tb";
 import { FiLinkedin, FiPhoneCall } from "react-icons/fi";
 
-const SocialMedia = () => (
-  <div className="w-fit hidden md:flex flex-col gap-6 text-gray-600 dark:text-[#9A9A9A] absolute bottom-10 left-8 lg:left-12 xl:left-16">
+const SocialMedia = ({ idName }) => (
+  <div
+    className={`w-fit hidden md:flex flex-col gap-6 ${
+      idName === "boogiedml" || idName === "skills"
+        ? "text-[#CCF381]"
+        : idName === "about" || idName === "projects"
+        ? "text-[#4732D3]"
+        : ""
+    } dark:text-[#9A9A9A] absolute bottom-10 left-8 lg:left-12 xl:left-16`}
+  >
     <a
       href="https://github.com/boogiedml"
       className="hover:text-white transition-all duration-300"
