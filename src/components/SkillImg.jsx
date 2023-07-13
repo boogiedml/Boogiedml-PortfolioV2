@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SkillImg = ({ src, alt, className }) => {
   return (
@@ -8,6 +9,12 @@ const SkillImg = ({ src, alt, className }) => {
       alt={alt}
     />
   );
+};
+
+SkillImg.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default SkillImg;

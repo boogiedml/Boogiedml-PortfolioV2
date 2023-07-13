@@ -1,19 +1,18 @@
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import {
-  About,
-  Boogiedml,
-  Footer,
-  Navbar,
-  Projects,
-  Skills,
-} from "./containers";
-import { useEffect } from "react";
-import { Clock, SkillsSlide } from "./components";
+import { Home, Work } from "./pages";
+import { AppSettings } from "./components";
+import { closeSetting } from "./redux/features/appSettingSlice";
 
 function App() {
   const { theme } = useSelector((state) => state.theme);
+  const { isOpened: appSettingIsOpened } = useSelector(
+    (state) => state.appSetting
+  );
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (theme === "dark") {
@@ -34,16 +33,17 @@ function App() {
   };
 
   return (
-    <div style={backgroundStyles} className="relative">
-      <Navbar />
-      <Boogiedml />
-      <About />
-      <Skills />
-      <SkillsSlide />
-      <Projects />
-      <Footer />
-      <Clock />
-    </div>
+    <>
+      <div style={backgroundStyles} className="relative">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/work/" element={<Work />} />
+        </Routes>
+      </div>
+      {appSettingIsOpened && (
+        <AppSettings onClose={() => dispatch(closeSetting())} />
+      )}
+    </>
   );
 }
 

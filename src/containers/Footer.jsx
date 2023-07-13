@@ -1,7 +1,10 @@
 import React from "react";
 import { CopyRight, Link } from "../components";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+
   return (
     <section className="bg-[#3D155F] dark:bg-transparent">
       <div className="py-4 mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-36">
@@ -22,7 +25,11 @@ const Footer = () => {
           />
         </div>
         <div className="h-fit flex flex-col gap-6">
-          <Link text="My Work" link="mailto:isholasherifdeen@gmail.com" />
+          {location.pathname === "/" ? (
+            <Link text="My Work" link="/work/" />
+          ) : (
+            <Link text="Home" link="/" />
+          )}
           <Link text="My Résumé" link="mailto:isholasherifdeen@gmail.com" />
         </div>
       </div>

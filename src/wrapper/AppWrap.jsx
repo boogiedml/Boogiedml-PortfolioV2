@@ -1,21 +1,17 @@
 import React from "react";
-import { NavigationDots, SocialMedia } from "../components";
+import { SettingButton, SocialMedia } from "../components";
+import { useDispatch } from "react-redux";
 
 const AppWrap = (Component, idName, className) =>
   function HOC() {
     const lightBgColor =
       idName === "boogiedml" || idName === "skills"
         ? "bg-[#4732D3]"
-        : idName === "about" || idName === "projects"
+        : idName === "about" || idName === "contact"
         ? "bg-[#F9F9F9]"
         : "";
 
-    const lightTextColor =
-      idName === "boogiedml" || idName === "skills"
-        ? "text-[#CCF381]"
-        : idName === "about" || idName === "projects"
-        ? "text-[#4732D3]"
-        : "";
+    const dispatch = useDispatch();
 
     return (
       <div
@@ -30,14 +26,7 @@ const AppWrap = (Component, idName, className) =>
         >
           <Component />
         </div>
-        {/* <div className="hidden md:flex gap-3 absolute bottom-32 -right-16 lg:-right-12 xl:-right-8 transform rotate-90">
-          <p
-            className={`text-sm font-outfit ${lightTextColor} dark:text-[#9A9A9A]`}
-          >
-            isholasherifdeen@gmail.com
-          </p>
-        </div> */}
-        {/* <NavigationDots active={idName} /> */}
+        <SettingButton idName={idName} />
       </div>
     );
   };

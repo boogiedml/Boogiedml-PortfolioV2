@@ -47,7 +47,7 @@ const Boogiedml = () => {
           Creating exceptional digital products, brands, and user experiences.
         </h3>
       </div>
-      <div className="mt-20 md:mt-4">
+      <div className=" mt-32 md:mt-4">
         <ButtonLink
           text="Download Resume"
           onClick={handleResumeDownload}

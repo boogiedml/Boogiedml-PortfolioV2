@@ -1,22 +1,29 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const SectionHeader = ({ sectionTitle, idName }) => {
+const SectionHeader = ({ sectionTitle, idName, styles }) => {
   const textColor =
-    idName === "about" || idName === "projects"
+    idName === "about" || idName === "contact"
       ? "from-[#4732D3] to-[#4732D3]"
       : idName === "skills"
       ? "from-[#CCF381] to-[#CCF381]"
       : "";
 
   return (
-    <div className="pb-5 text-center">
+    <div className="header mb-4 text-center cursor-default">
       <h3
-        className={`text-3xl max-w-2xl mx-auto font-outfit font-normal leading-tight bg-gradient-to-r ${textColor} dark:from-[#9A9A9A] dark:to-zinc-700 bg-clip-text text-transparent`}
+        className={`text-xl md:text-2xl lg:text-3xl max-w-fit mx-auto font-grotesk font-normal leading-tight bg-gradient-to-r ${textColor} dark:from-[#9A9A9A] dark:to-zinc-700 bg-clip-text text-transparent ${styles}`}
       >
         {sectionTitle}
       </h3>
     </div>
   );
+};
+
+SectionHeader.propTypes = {
+  sectionTitle: PropTypes.string,
+  idName: PropTypes.string,
+  styles: PropTypes.string,
 };
 
 export default SectionHeader;
