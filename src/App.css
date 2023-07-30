@@ -27,3 +27,22 @@ body {
 /* label {
   color: rgba(61, 21, 95, 0.5);
 } */
+
+.swiper-pagination-bullet {
+  background-color: #4732d3;
+  width: 15px;
+  height: 15px;
+  border-radius: 6px;
+  opacity: 1;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #3d155f;
+  width: 35px;
+  border-radius: 10px;
+}
+
+/* placehoder  */
+input::placeholder,
+textarea::placeholder {
+  color: #9a9a9a !important;
+}

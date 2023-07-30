@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import sherifdeen from "../assets/sherifdeen.JPG";
 import sherifdeenLight from "../assets/sherifdeenLight.JPG";
 import { ButtonLink } from "../components";
-import resumePDF from "../../public/01SherifdeenIsholaResume.pdf";
+import resumePDF from "../assets/01SherifdeenIsholaResume.pdf";
 import AppWrap from "../wrapper/AppWrap";
 
 const Boogiedml = () => {

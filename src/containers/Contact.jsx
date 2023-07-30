@@ -24,7 +24,7 @@ const Contact = () => {
                 Your Name
               </label>
               <input
-                className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] md:text-base bg-transparent border-b-[1px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none"
+                className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] md:text-base bg-transparent border-b-[.6px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none transition-all duration-700"
                 type="text"
                 placeholder="Enter your name"
               />
@@ -37,7 +37,7 @@ const Contact = () => {
                 Email Address
               </label>
               <input
-                className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] md:text-base bg-transparent border-b-[1px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none"
+                className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] md:text-base bg-transparent border-b-[.6px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none transition-all duration-700"
                 type="email"
                 placeholder="Enter your email address"
               />
@@ -55,7 +55,7 @@ const Contact = () => {
               id="message"
               name="message"
               required="required"
-              className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] md:text-base bg-transparent border-b-[1px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none"
+              className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] md:text-base bg-transparent border-b-[.6px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none transition-all duration-700"
               rows="3"
             ></textarea>
           </div>

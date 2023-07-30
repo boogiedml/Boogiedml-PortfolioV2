@@ -15,9 +15,11 @@ const Projects = () => {
       link: "http://boogiedml.onrender.com/",
       linkDisplay: "boogiedml.com",
       logoImg: theme === "dark" ? portfolioLogoD : portfolioLogo,
+      detailPageLink: "http://boogiedml.onrender.com/",
     },
     {
       title: "POS.com",
+      detailPageLink: "/work/pos/",
       logoElement: (
         <div className="flex gap-4 items-center dark:text-white">
           <RiSecurePaymentLine size={27} />
@@ -30,12 +32,12 @@ const Projects = () => {
   return (
     <section className="relative p-2 mt-6 md:mt-10 lg:mt-16">
       <div className="header pb-5 text-[#474747] text-center cursor-default">
-        <h3 className="text-2xl lg:text-3xl max-w-2xl mx-auto font-semibold dark:text-white mb-6">
+        <h3 className="text-2xl xl:text-3xl max-w-2xl mx-auto font-semibold dark:text-white mb-6">
           <span className="opacity-70">/</span>
           work
           <span className="opacity-70">.</span>
         </h3>
-        <p className="text-base md:text-lg lg:text-xl font-outfit font-[350]">
+        <p className="text-base lg:text-lg xl:text-xl font-outfit font-[350]">
           Selected work I've taken on in the past.
         </p>
       </div>
@@ -48,6 +50,7 @@ const Projects = () => {
             linkDisplay={p.linkDisplay}
             logoImg={p.logoImg}
             logoElement={p.logoElement}
+            detailPageLink={p.detailPageLink}
           />
         ))}
       </div>

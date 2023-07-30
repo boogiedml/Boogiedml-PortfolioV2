@@ -1,6 +1,5 @@
 import React from "react";
 import { SettingButton, SocialMedia } from "../components";
-import { useDispatch } from "react-redux";
 
 const AppWrap = (Component, idName, className) =>
   function HOC() {
@@ -10,8 +9,6 @@ const AppWrap = (Component, idName, className) =>
         : idName === "about" || idName === "contact"
         ? "bg-[#F9F9F9]"
         : "";
-
-    const dispatch = useDispatch();
 
     return (
       <div

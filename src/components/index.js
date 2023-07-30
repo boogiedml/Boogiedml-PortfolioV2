@@ -13,3 +13,5 @@ export { default as ProjectCard } from "./ProjectCard";
 export { default as NavigationDots } from "./NavigationDots";
 export { default as AppSettings } from "./AppSettings";
 export { default as SettingButton } from "./SettingButton";
+export { default as SwiperButtons } from "./SwiperButtons";
+export { default as ProjectName } from "./ProjectName";
