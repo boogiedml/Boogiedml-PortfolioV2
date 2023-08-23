@@ -19,6 +19,7 @@ const ProjectImageSwipe = ({ imageArr }) => {
       spaceBetween={0}
       slidesPerView={1}
       autoplay={{ delay: 10000 }}
+      loop={true}
       pagination={pagination}
     >
       {imageArr?.map((image, i) => (

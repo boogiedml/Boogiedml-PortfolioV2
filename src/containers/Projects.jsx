@@ -5,6 +5,7 @@ import portfolioLogoD from "../assets/isholaG.svg";
 import portfolioLogo from "../assets/isholaP.svg";
 import { useSelector } from "react-redux";
 import { RiSecurePaymentLine } from "react-icons/ri";
+import { GiInfinity } from "react-icons/gi";
 
 const Projects = () => {
   const { theme } = useSelector((state) => state.theme);
@@ -26,6 +27,19 @@ const Projects = () => {
           <h2 className="text-lg">POS.com</h2>
         </div>
       ),
+    },
+    {
+      title: "Codeloopz",
+      link: "https://codeloopz-portfolio-site.vercel.app/",
+      linkDisplay: "codeloopz.dev",
+      logoElement: (
+        <span className="logo group flex items-center font-grotesk text-lg text-white hover:text-gray-200 transition-all duration-300 cursor-pointer">
+          Codel
+          <GiInfinity className="text-3xl animate-spin antialiased group-hover:animate-none" />
+          pz
+        </span>
+      ),
+      detailPageLink: "https://codeloopz-portfolio-site.vercel.app/",
     },
   ];
 
