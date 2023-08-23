@@ -33,7 +33,7 @@ const Projects = () => {
       link: "https://codeloopz-portfolio-site.vercel.app/",
       linkDisplay: "codeloopz.dev",
       logoElement: (
-        <span className="logo group flex items-center font-grotesk text-lg text-white hover:text-gray-200 transition-all duration-300 cursor-pointer">
+        <span className="logo group flex items-center font-grotesk text-lg dark:text-white transition-all duration-300 cursor-pointer">
           Codel
           <GiInfinity className="text-3xl animate-spin antialiased group-hover:animate-none" />
           pz
