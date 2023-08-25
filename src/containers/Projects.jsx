@@ -6,6 +6,7 @@ import portfolioLogo from "../assets/isholaP.svg";
 import { useSelector } from "react-redux";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { GiInfinity } from "react-icons/gi";
+import monaco from "../assets/monaco.png"
 
 const Projects = () => {
   const { theme } = useSelector((state) => state.theme);
@@ -40,6 +41,13 @@ const Projects = () => {
         </span>
       ),
       detailPageLink: "https://codeloopz-portfolio-site.vercel.app/",
+    },
+    {
+      title: "Monaco",
+      link: "https://monacoemenu.online/",
+      linkDisplay: "monaco.com",
+      logoImg: monaco,
+      detailPageLink: "https://monacoemenu.online/",
     },
   ];
 
