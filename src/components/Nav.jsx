@@ -10,7 +10,6 @@ import NavbarMenu from "./NavbarMenu";
 const Nav = ({ styles }) => {
   const { theme } = useSelector((state) => state.theme);
   const [isNavMenuOpened, setIsNavMenuOpened] = useState(false);
-  const dispatch = useDispatch();
 
   return (
     <>
