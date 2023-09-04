@@ -47,3 +47,62 @@ input::placeholder,
 textarea::placeholder {
   color: #9a9a9a !important;
 }
+
+/* Default styles for the bars */
+.bar {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.miniNav .bar {
+  background-color: #000;
+}
+
+.bar.bar1 {
+  top: 0;
+  right: 0;
+  transform: translateY(0);
+  width: 100%;
+}
+
+.bar.bar2 {
+  bottom: 0;
+  right: 0;
+  transform: translateY(0);
+  width: 70%;
+}
+
+.bar.bar-space {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 25%;
+  background-color: transparent;
+}
+
+.opened .bar.bar-space {
+  display: none;
+}
+
+.opened .bar.bar1 {
+  transform: translateY(50%) rotate(45deg);
+  /* background-color: #4732d3; */
+  top: 5px;
+  width: 90%;
+}
+
+.opened .bar.bar2 {
+  transform: translateY(-50%) rotate(-45deg);
+  /* background-color: #4732d3; */
+  bottom: 5px;
+  width: 90%;
+}
+
+/* Nav menu  */
+.nav__menu {
+  box-shadow: 0 10px 53px 0 rgba(163, 204, 170, 0.3);
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { SettingButton, SocialMedia } from "../components";
+import { SocialMedia } from "../components";
 
 const AppWrap = (Component, idName, className) =>
   function HOC() {
@@ -23,7 +23,6 @@ const AppWrap = (Component, idName, className) =>
         >
           <Component />
         </div>
-        <SettingButton idName={idName} />
       </div>
     );
   };
