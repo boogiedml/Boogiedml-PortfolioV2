@@ -26,9 +26,9 @@ const Footer = () => {
         </div>
         <div className="h-fit flex flex-col gap-6">
           {location.pathname === "/" ? (
-            <Link to="/work/">My Work</Link>
+            <Link text="My Work" link="/work/" />
           ) : (
-            <Link to="/">Home</Link>
+            <Link text="Home" link="/" />
           )}
           <Link text="My Résumé" link="mailto:isholasherifdeen@gmail.com" />
         </div>
