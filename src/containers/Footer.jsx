@@ -1,5 +1,5 @@
 import React from "react";
-import { CopyRight, Link } from "../components";
+import { CopyRight, ExternalLink, InternalLink } from "../components";
 import { useLocation } from "react-router-dom";
 
 const Footer = () => {
@@ -15,22 +15,25 @@ const Footer = () => {
           <h4 className="text-[#cbc9e2] dark:text-[#CCF381] text base md:text-md xl:text-lg leading-10 tracking-[0.25em] font-light">
             SAY HELLO
           </h4>
-          <Link
+          <ExternalLink
             text="hello@boogiedml.dev"
             link="mailto:isholasherifdeen@gmail.com"
           />
-          <Link
+          <ExternalLink
             text="t.me/boogiedml"
             link="mailto:isholasherifdeen@gmail.com"
           />
         </div>
         <div className="h-fit flex flex-col gap-6">
           {location.pathname === "/" ? (
-            <Link text="My Work" link="/work/" />
+            <InternalLink text="My Work" link="/work/" />
           ) : (
-            <Link text="Home" link="/" />
+            <InternalLink text="Home" link="/" />
           )}
-          <Link text="My Résumé" link="mailto:isholasherifdeen@gmail.com" />
+          <ExternalLink
+            text="My Résumé"
+            link="mailto:isholasherifdeen@gmail.com"
+          />
         </div>
       </div>
       <div className="py-4 mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-36">

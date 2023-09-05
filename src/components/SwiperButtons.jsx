@@ -26,7 +26,7 @@ const SwiperButtons = () => {
       <button
         className={`${
           isBeginning ? "opacity-0" : "opacity-100"
-        } ml-4 text-[#CCF381] bg-[#3D155F] dark:bg-[#1A1A1A] dark:text-[#9A9A9A] hover:scale-110 transition-all duration-500 w-10 h-10 flex items-center justify-center rounded-full`}
+        } ml-4 text-[#CCF381] bg-[#3D155F] dark:bg-[#1A1A1A] dark:text-[#9A9A9A] border-[1px] border-white hover:scale-110 transition-all duration-500 w-10 h-10 flex items-center justify-center rounded-full`}
         onClick={() => swiper.slidePrev()}
       >
         <IoIosArrowBack size={20} />
@@ -34,7 +34,7 @@ const SwiperButtons = () => {
       <button
         className={`${
           isEnd ? "opacity-0" : "opacity-100"
-        } mr-4 text-[#CCF381] bg-[#3D155F] dark:bg-[#1A1A1A] dark:text-[#9A9A9A] hover:scale-110 transition-all duration-500 w-10 h-10 flex items-center justify-center rounded-full`}
+        } mr-4 text-[#CCF381] bg-[#3D155F] dark:bg-[#1A1A1A] dark:text-[#9A9A9A] border-[1px] border-white hover:scale-110 transition-all duration-500 w-10 h-10 flex items-center justify-center rounded-full`}
         onClick={() => swiper.slideNext()}
       >
         <IoIosArrowForward size={20} />

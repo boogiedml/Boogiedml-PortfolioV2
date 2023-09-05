@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
@@ -7,6 +7,8 @@ const NavbarMenu = () => {
   const location = useLocation();
   const screenWidth = window.innerWidth;
   const smallScreen = screenWidth < 640;
+  const menuRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const menu = [
     {
@@ -50,18 +52,18 @@ const NavbarMenu = () => {
         <h4 className="text-[#cbc9e2] dark:text-[#CCF381] text-base leading-10 tracking-[0.25em] font-[400]">
           SAY HELLO
         </h4>
-        <Link
+        <a
           className="text-lg sm:text-base font-[400] relative cursor-pointer tracking-[1px] text-[#4732D3] dark:text-[#9A9A9A] w-fit hover:transform hover:-translate-x-2 transition-all duration-300"
-          to="mailto:isholasherifdeen@gmail.com"
+          href="mailto:isholasherifdeen@gmail.com"
         >
           hello@boogiedml.dev
-        </Link>
-        <Link
+        </a>
+        <a
           className="text-lg sm:text-base font-[400] relative cursor-pointer tracking-[1px] text-[#4732D3] dark:text-[#9A9A9A] w-fit hover:transform hover:-translate-x-2 transition-all duration-300"
-          to="mailto:isholasherifdeen@gmail.com"
+          href="https://t.me/boogiedml"
         >
           t.me/boogiedml
-        </Link>
+        </a>
         <div className="text-lg sm:text-[15px] text-[#4732D3] dark:text-[#9A9A9A] font-outfit flex gap-10 mt-20 sm:mt-8">
           <a
             className="hover:transform hover:-translate-y-0.5 transition-all duration-300"
@@ -79,7 +81,7 @@ const NavbarMenu = () => {
           </a>
           <a
             className="hover:transform hover:-translate-y-0.5 transition-all duration-300"
-            href=""
+            href="https://www.linkedin.com/in/sherifdeen-ishola-mern-stack-web-developer/"
             target="_blank"
           >
             LN

@@ -1,6 +1,8 @@
 export { default as ButtonLink } from "./ButtonLink";
 export { default as Nav } from "./Nav";
 export { default as Link } from "./Link";
+export { default as InternalLink } from "./InternalLink";
+export { default as ExternalLink } from "./ExternalLink";
 export { default as SectionHeader } from "./SectionHeader";
 export { default as ThemeToggle } from "./ThemeToggle";
 export { default as SocialMedia } from "./SocialMedia";

@@ -45,7 +45,7 @@ const SocialMedia = ({ idName }) => (
       </div>
     </a>
     <a
-      href=""
+      href="https://www.linkedin.com/in/sherifdeen-ishola-mern-stack-web-developer/"
       className="dark:hover:text-white transition-all duration-300"
       target="_blank"
     >
