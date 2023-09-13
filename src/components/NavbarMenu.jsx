@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
@@ -17,6 +17,13 @@ const NavbarMenu = () => {
     },
     { name: "My Résumé", link: "mailto:isholasherifdeen@gmail.com" },
   ];
+
+  useEffect(() => { 
+     document.body.style.overflow = "hidden"; 
+     return () => { 
+       document.body.style.overflow = "auto"; 
+     }; 
+   }, []);
 
   return (
     <motion.div
