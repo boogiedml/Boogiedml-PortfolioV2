@@ -31,7 +31,10 @@ const Nav = ({ styles }) => {
       </div>
       <AnimatePresence>
         {isNavMenuOpened && (
-          <NavbarMenu setIsNavMenuOpened={setIsNavMenuOpened} />
+          <NavbarMenu
+            menuOpen={isNavMenuOpened}
+            setMenuOpen={setIsNavMenuOpened}
+          />
         )}
       </AnimatePresence>
     </>

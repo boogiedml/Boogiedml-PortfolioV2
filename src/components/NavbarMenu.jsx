@@ -1,14 +1,13 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
-const NavbarMenu = () => {
+const NavbarMenu = ({ menuOpen, setMenuOpen }) => {
   const location = useLocation();
   const screenWidth = window.innerWidth;
   const smallScreen = screenWidth < 640;
   const menuRef = useRef(null);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   const menu = [
     {
@@ -18,15 +17,31 @@ const NavbarMenu = () => {
     { name: "My Résumé", link: "mailto:isholasherifdeen@gmail.com" },
   ];
 
-  useEffect(() => { 
-     document.body.style.overflow = "hidden"; 
-     return () => { 
-       document.body.style.overflow = "auto"; 
-     }; 
-   }, []);
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (menuOpen && menuRef.current && !menuRef.current.contains(e.target)) {
+        setMenuOpen(false);
+        // console.log(menuOpen);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [menuOpen]);
 
   return (
     <motion.div
+      ref={menuRef}
       initial={
         smallScreen
           ? { opacity: 0 }

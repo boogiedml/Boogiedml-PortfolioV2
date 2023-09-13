@@ -24,7 +24,7 @@ const Navbar = () => {
               ? logoP
               : logo
           }
-          alt=""
+          alt="logo"
         />
         <Hamburger
           isNavMenuOpened={isNavMenuOpened}
@@ -33,7 +33,10 @@ const Navbar = () => {
       </div>
       <AnimatePresence>
         {isNavMenuOpened && (
-          <NavbarMenu setIsNavMenuOpened={setIsNavMenuOpened} />
+          <NavbarMenu
+            menuOpen={isNavMenuOpened}
+            setMenuOpen={setIsNavMenuOpened}
+          />
         )}
       </AnimatePresence>
     </>
