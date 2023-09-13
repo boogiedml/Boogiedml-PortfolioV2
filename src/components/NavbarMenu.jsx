@@ -37,7 +37,12 @@ const NavbarMenu = () => {
       transition={{ type: "tween", duration: 0.3 }}
       className="nav__menu dark:shadow-none fixed right-0 top-0 sm:right-6 md:right-14 sm:top-6 bg-white dark:bg-[#1A1A1A] w-full sm:w-[300px] md:w-[350px] h-screen sm:h-auto p-14 sm:p-10 md:p-12 pt-40 sm:pt-16 z-[100] dark:border-[1px] dark:border-[#242424]"
     >
-      <div className="flex flex-col gap-4 mb-20 sm:mb-8">
+      <motion.div
+        initial={{ opacity: 0, x: -3 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ type: "tween", duration: 3 }}
+        className="flex flex-col gap-4 mb-20 sm:mb-8"
+      >
         {menu.map((m, i) => (
           <Link
             key={i}
@@ -47,7 +52,7 @@ const NavbarMenu = () => {
             {m.name}
           </Link>
         ))}
-      </div>
+      </motion.div>
       <div className="flex flex-col gap-4">
         <h4 className="text-[#cbc9e2] dark:text-[#CCF381] text-base leading-10 tracking-[0.25em] font-[400]">
           SAY HELLO
