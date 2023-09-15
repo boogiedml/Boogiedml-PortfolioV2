@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Hamburger, NavbarMenu } from "../components";
 import logo from "../assets/isholaG.svg";
 import logoD from "../assets/isholaW.svg";
@@ -9,8 +9,19 @@ import { AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const [isNavMenuOpened, setIsNavMenuOpened] = useState(false);
   const { theme } = useSelector((state) => state.theme);
-  const screenWidth = window.innerWidth;
-  const smallScreen = screenWidth < 640;
+  const [smallScreen, setSmallScreen] = useState(window.innerWidth < 640);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSmallScreen(window.innerWidth < 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>

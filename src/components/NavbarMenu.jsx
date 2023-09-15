@@ -25,17 +25,16 @@ const NavbarMenu = ({ menuOpen, setMenuOpen }) => {
   }, []);
 
   useEffect(() => {
-    const checkIfClickedOutside = (e) => {
+    const handleBodyClick = (e) => {
       if (menuOpen && menuRef.current && !menuRef.current.contains(e.target)) {
         setMenuOpen(false);
-        // console.log(menuOpen);
       }
     };
 
-    document.addEventListener("mousedown", checkIfClickedOutside);
+    document.body.addEventListener("click", handleBodyClick);
 
     return () => {
-      document.removeEventListener("mousedown", checkIfClickedOutside);
+      document.body.removeEventListener("click", handleBodyClick);
     };
   }, [menuOpen]);
 
