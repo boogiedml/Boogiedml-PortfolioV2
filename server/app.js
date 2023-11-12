@@ -19,6 +19,15 @@ const emailConfig = {
 
 const transporter = nodemailer.createTransport(emailConfig);
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: {
+      message: "Welcome to Boogiedml Contact API",
+      status_code: 200,
+    },
+  });
+});
+
 app.post("/api/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
