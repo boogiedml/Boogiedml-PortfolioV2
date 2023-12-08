@@ -2,27 +2,31 @@ import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import resumePDF from "../assets/01SherifdeenIsholaResume.pdf";
 
 const NavbarMenu = ({ menuOpen, setMenuOpen }) => {
   const location = useLocation();
   const screenWidth = window.innerWidth;
   const smallScreen = screenWidth < 640;
   const menuRef = useRef(null);
+  const handleResumeView = () => {
+    window.open(resumePDF, "_blank");
+  };
 
   const menu = [
     {
       name: location.pathname === "/" ? "My Work" : "Home",
       link: location.pathname === "/" ? "/work/" : "/",
     },
-    { name: "My Résumé", link: "mailto:isholasherifdeen@gmail.com" },
+    { name: "My Résumé", onClick: handleResumeView },
   ];
 
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.body.style.overflow = "hidden";
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, []);
 
   useEffect(() => {
     const handleBodyClick = (e) => {
@@ -68,6 +72,7 @@ const NavbarMenu = ({ menuOpen, setMenuOpen }) => {
           <Link
             key={i}
             to={m.link}
+            onClick={m.onClick && m.onClick}
             className="text-lg sm:text-base font-[400] relative cursor-pointer tracking-[1px] text-[#4732D3] dark:text-[#9A9A9A] w-fit hover:transform hover:-translate-x-2 transition-all duration-300"
           >
             {m.name}

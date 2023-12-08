@@ -76,6 +76,7 @@ const Contact = () => {
                 <input
                   className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] md:text-base bg-transparent border-b-[.6px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none transition-all duration-700"
                   type="text"
+                  id="name"
                   name="name"
                   required="required"
                   value={formData.name}
@@ -86,12 +87,13 @@ const Contact = () => {
               <div className="w-full flex flex-col gap-1.5 group flex-1">
                 <label
                   className="text-[#3D155F] dark:text-[#9A9A9A] opacity-80 text-xs md:text-sm font-[200]"
-                  htmlFor="name"
+                  htmlFor="email"
                 >
                   Email Address
                 </label>
                 <input
                   className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] md:text-base bg-transparent border-b-[.6px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none transition-all duration-700"
+                  id="email"
                   type="email"
                   name="email"
                   required="required"

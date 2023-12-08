@@ -48,7 +48,7 @@ function App() {
 
           {/* Project route with ProjectLayout */}
           <Route
-            path="/work/pos/"
+            path="/work/posxena/"
             element={
               <ProjectLayout>
                 <Pos />

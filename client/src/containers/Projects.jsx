@@ -6,7 +6,10 @@ import portfolioLogo from "../assets/isholaP.svg";
 import { useSelector } from "react-redux";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { GiInfinity } from "react-icons/gi";
-import monaco from "../assets/monaco.png"
+import monaco from "../assets/monaco.png";
+import arktively from "../assets/Arktively.svg";
+import posxenaDark from "../assets/posxena-dark.svg";
+import posxenaLight from "../assets/posxena-light.svg";
 
 const Projects = () => {
   const { theme } = useSelector((state) => state.theme);
@@ -20,14 +23,9 @@ const Projects = () => {
       detailPageLink: "http://boogiedml.onrender.com/",
     },
     {
-      title: "POS.com",
-      detailPageLink: "/work/pos/",
-      logoElement: (
-        <div className="flex gap-4 items-center dark:text-white">
-          <RiSecurePaymentLine size={27} />
-          <h2 className="text-lg">POS.com</h2>
-        </div>
-      ),
+      title: "Posxena",
+      detailPageLink: "/work/posxena/",
+      logoImg: theme === "dark" ? posxenaDark : posxenaLight,
     },
     {
       title: "Codeloopz",
@@ -49,6 +47,13 @@ const Projects = () => {
       logoImg: monaco,
       detailPageLink: "https://monacoemenu.online/",
     },
+    {
+      title: "Arktively",
+      link: "https://arktively.com",
+      linkDisplay: "arktively.com",
+      logoImg: arktively,
+      detailPageLink: "https://arktively.com",
+    },
   ];
 
   return (
@@ -63,7 +68,7 @@ const Projects = () => {
           Selected work I've taken on in the past.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 my-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:my-20">
         {projects.map((p, i) => (
           <ProjectCard
             key={p.title + i}

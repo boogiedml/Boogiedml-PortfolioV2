@@ -1,9 +1,13 @@
 import React from "react";
 import { CopyRight, ExternalLink, InternalLink } from "../components";
 import { useLocation } from "react-router-dom";
+import resumePDF from "../assets/01SherifdeenIsholaResume.pdf";
 
 const Footer = () => {
   const location = useLocation();
+  const handleResumeView = () => {
+    window.open(resumePDF, "_blank");
+  };
 
   return (
     <section className="bg-[#3D155F] dark:bg-transparent">
@@ -30,10 +34,7 @@ const Footer = () => {
           ) : (
             <InternalLink text="Home" link="/" />
           )}
-          <ExternalLink
-            text="My Résumé"
-            link="mailto:isholasherifdeen@gmail.com"
-          />
+          <ExternalLink text="My Résumé" onClick={handleResumeView} />
         </div>
       </div>
       <div className="py-4 mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-36">
