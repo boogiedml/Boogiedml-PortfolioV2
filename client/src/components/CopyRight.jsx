@@ -5,7 +5,7 @@ const CopyRight = () => {
     <>
       <div className="copyright">
         <p className="text-sm text-[#CCF381] dark:text-[#9A9A9A] font-outfit text-center">
-          © 2023 Boogiedml All rights reserved.
+          © 2024 Boogiedml All rights reserved.
         </p>
       </div>
       <div className="hidden text-base text-[#CCF381] dark:text-[#9A9A9A] font-outfit md:flex gap-6 mb-4">
