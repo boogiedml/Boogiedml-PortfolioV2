@@ -54,6 +54,14 @@ const Projects = () => {
       logoImg: arktively,
       detailPageLink: "https://arktively.com",
     },
+    {
+      title: "Pokemón",
+      link: "https://pokemon-vetw.onrender.com/",
+      linkDisplay: "pokemón.com",
+      logoImg:
+        "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*O4T4S2yqbgOpm9hzC2CxzQ.png",
+      detailPageLink: "https://pokemon-vetw.onrender.com/",
+    },
   ];
 
   return (

@@ -1,11 +1,14 @@
 import React from "react";
+import moment from "moment-timezone";
 
 const CopyRight = () => {
+  const currentYear = moment().get("year");
+
   return (
     <>
       <div className="copyright">
         <p className="text-sm text-[#CCF381] dark:text-[#9A9A9A] font-outfit text-center">
-          © 2024 Boogiedml All rights reserved.
+          © {currentYear} Boogiedml All rights reserved.
         </p>
       </div>
       <div className="hidden text-base text-[#CCF381] dark:text-[#9A9A9A] font-outfit md:flex gap-6 mb-4">
