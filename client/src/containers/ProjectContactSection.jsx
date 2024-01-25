@@ -117,7 +117,7 @@ const ProjectContactSection = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required="required"
-                className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] bg-transparent border-b-[.6px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none transition-all duration-700"
+                className="py-3 text-sm text-[#4732D3] dark:text-[#9A9A9A] bg-transparent border-b-[.6px] group-focus-within:border-[#4732D3] dark:group-focus-within:border-[#CCF381] border-[#3D155F] dark:border-[#9A9A9A] outline-none transition-all duration-700 resize-none"
                 rows="3"
               ></textarea>
             </div>
