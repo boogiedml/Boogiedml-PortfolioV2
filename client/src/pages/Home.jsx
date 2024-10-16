@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   About,
   Boogiedml,
@@ -8,7 +6,6 @@ import {
   Navbar,
   Skills,
 } from "../containers";
-import { Clock, SkillsSlide } from "../components";
 
 const Home = () => {
   return (
@@ -17,10 +14,8 @@ const Home = () => {
       <Boogiedml />
       <About />
       <Skills />
-      {/* <SkillsSlide /> */}
       <Contact />
       <Footer />
-      {/* <Clock /> */}
     </div>
   );
 };

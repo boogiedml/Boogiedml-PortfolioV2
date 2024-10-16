@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { TbBrandGithub, TbBrandInstagram } from "react-icons/tb";
 import { FiLinkedin, FiPhoneCall } from "react-icons/fi";

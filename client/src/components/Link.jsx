@@ -1,5 +1,3 @@
-import React from "react";
-
 const Link = ({ text, link }) => {
   return (
     <span className="w-fit hover:transform hover:-translate-x-2 transition-all duration-300">

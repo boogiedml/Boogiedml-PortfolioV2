@@ -1,4 +1,3 @@
-import React from "react";
 import { openSetting } from "../redux/features/appSettingSlice";
 import { FiSettings } from "react-icons/fi";
 import { useDispatch } from "react-redux";

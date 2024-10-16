@@ -1,5 +1,3 @@
-import React from "react";
-
 const NavigationDots = ({ active }) => (
   <div className="hidden absolute bottom-32 right-8 lg:right-12 xl:right-16 md:flex flex-col gap-4 justify-center items-center">
     {["boogiedml", "about", "skills", "projects", "contact"].map(

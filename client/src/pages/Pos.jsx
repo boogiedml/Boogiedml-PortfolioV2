@@ -1,4 +1,3 @@
-import React from "react";
 import AppWrap from "../wrapper/AppWrap";
 import {
   ProjectContactSection,

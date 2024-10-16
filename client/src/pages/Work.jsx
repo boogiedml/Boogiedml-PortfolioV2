@@ -1,4 +1,3 @@
-import React from "react";
 import { Footer, Projects } from "../containers";
 import { Nav } from "../components";
 

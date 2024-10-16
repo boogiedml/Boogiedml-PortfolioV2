@@ -1,5 +1,3 @@
-import React from "react";
-
 const Hamburger = ({ color, isNavMenuOpened, setIsNavMenuOpened }) => {
   return (
     <div

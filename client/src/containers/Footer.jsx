@@ -1,4 +1,3 @@
-import React from "react";
 import { CopyRight, ExternalLink, InternalLink } from "../components";
 import { useLocation } from "react-router-dom";
 import resumePDF from "../assets/01SherifdeenIsholaResume.pdf";

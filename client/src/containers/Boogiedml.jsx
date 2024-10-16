@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 
 import sherifdeen from "../assets/sherifdeen.JPG";
@@ -11,7 +10,6 @@ const Boogiedml = () => {
   const { theme } = useSelector((state) => state.theme);
 
   const handleResumeDownload = () => {
-    // window.open(resumePDF, "_blank");
     const link = document.createElement("a");
     link.href = resumePDF;
     link.download = "01SherifdeenIsholaResume.pdf";
@@ -35,7 +33,7 @@ const Boogiedml = () => {
       <div className="absolute hidden md:block -top-14 lg:-top-6 -left-32 lg:-left-64 w-72 lg:w-96 px-5 py-3 text-left font-outfit text-base bg-[#CCF381] border-[#CCF381] text-[#4732D3] dark:bg-[#1A1A1A] dark:text-[#9A9A9A] border-[1px] dark:border-[#242424]">
         <p>
           Sherifdeen Ishola Web Developer Based in Nigeria. A Software Developer
-          with entry- level experience, specializing in{" "}
+          with intermediate - level experience, specializing in{" "}
           <span className=" underline underline-offset-2 dark:decoration-transparent dark:text-white">
             user interface design
           </span>

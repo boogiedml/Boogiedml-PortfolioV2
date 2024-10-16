@@ -1,4 +1,3 @@
-import React from "react";
 import ThemeToggle from "./ThemeToggle";
 import ButtonLink from "./ButtonLink";
 
@@ -6,7 +5,9 @@ const AppSettings = ({ onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-900 dark:bg-black bg-opacity-50 dark:bg-opacity-50 z-40">
       <div className="bg-[#CCF381] dark:bg-[#1A1A1A] text-[#4732D3] dark:text-[#9A9A9A] text-sm p-4 w-screen md:w-[350px] mx-3">
-        <h5 className="text-sm md:text-base mb-3 tracking-[2px]">App setting</h5>
+        <h5 className="text-sm md:text-base mb-3 tracking-[2px]">
+          App setting
+        </h5>
         <div className="flex justify-between items-center gap-5">
           <p className="text-xs md:text-sm">App mode</p>
           <ThemeToggle />

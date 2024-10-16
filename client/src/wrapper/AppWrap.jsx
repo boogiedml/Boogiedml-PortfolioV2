@@ -1,4 +1,3 @@
-import React from "react";
 import { SocialMedia } from "../components";
 
 const AppWrap = (Component, idName, className) =>

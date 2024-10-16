@@ -1,12 +1,10 @@
-import React from "react";
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/no-unescaped-entities */
 import AppWrap from "../wrapper/AppWrap";
 import { ProjectCard } from "../components";
 import portfolioLogoD from "../assets/isholaG.svg";
 import portfolioLogo from "../assets/isholaP.svg";
 import { useSelector } from "react-redux";
-import { RiSecurePaymentLine } from "react-icons/ri";
-import { GiInfinity } from "react-icons/gi";
-import monaco from "../assets/monaco.png";
 import arktively from "../assets/Arktively.svg";
 import posxenaDark from "../assets/posxena-dark.svg";
 import posxenaLight from "../assets/posxena-light.svg";
@@ -28,26 +26,6 @@ const Projects = () => {
       logoImg: theme === "dark" ? posxenaDark : posxenaLight,
     },
     {
-      title: "Codeloopz",
-      link: "https://codeloopz-portfolio-site.vercel.app/",
-      linkDisplay: "codeloopz.dev",
-      logoElement: (
-        <span className="logo group flex items-center font-grotesk text-lg dark:text-white transition-all duration-300 cursor-pointer">
-          Codel
-          <GiInfinity className="text-3xl animate-spin antialiased group-hover:animate-none" />
-          pz
-        </span>
-      ),
-      detailPageLink: "https://codeloopz-portfolio-site.vercel.app/",
-    },
-    {
-      title: "Monaco",
-      link: "https://monacoemenu.online/",
-      linkDisplay: "monaco.com",
-      logoImg: monaco,
-      detailPageLink: "https://monacoemenu.online/",
-    },
-    {
       title: "Arktively",
       link: "https://arktively.com",
       linkDisplay: "arktively.com",
@@ -55,12 +33,12 @@ const Projects = () => {
       detailPageLink: "https://arktively.com",
     },
     {
-      title: "Pokemón",
-      link: "https://pokemon-vetw.onrender.com/",
-      linkDisplay: "pokemón.com",
-      logoImg:
-        "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*O4T4S2yqbgOpm9hzC2CxzQ.png",
-      detailPageLink: "https://pokemon-vetw.onrender.com/",
+      title: "Football Fury",
+      link: "https://www.footballfury.net/",
+      linkDisplay: "footballfury.net",
+      logoWidth: "55%",
+      logoImg: "https://www.footballfury.net/assets/Logo-D_Lo8f-d.svg",
+      detailPageLink: "https://www.footballfury.net/",
     },
   ];
 
@@ -84,6 +62,7 @@ const Projects = () => {
             link={p.link}
             linkDisplay={p.linkDisplay}
             logoImg={p.logoImg}
+            logoWidth={p.logoWidth}
             logoElement={p.logoElement}
             detailPageLink={p.detailPageLink}
           />

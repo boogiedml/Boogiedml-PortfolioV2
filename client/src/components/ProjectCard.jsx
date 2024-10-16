@@ -1,10 +1,11 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const ProjectCard = ({
   title,
   link,
   linkDisplay,
   logoImg,
+  logoWidth,
   logoElement,
   detailPageLink,
 }) => {
@@ -21,6 +22,9 @@ const ProjectCard = ({
         )}
         {logoImg && (
           <img
+            style={{
+              width: logoWidth ? logoWidth : "6rem",
+            }}
             className="w-20 md:w-24 cursor-default"
             src={logoImg}
             alt={title}
@@ -48,4 +52,13 @@ const ProjectCard = ({
   );
 };
 
+ProjectCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  linkDisplay: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  logoImg: PropTypes.string,
+  logoWidth: PropTypes.string,
+  logoElement: PropTypes.element,
+  detailPageLink: PropTypes.string.isRequired,
+};
 export default ProjectCard;

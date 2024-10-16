@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 
 import AppWrap from "../wrapper/AppWrap";
@@ -25,7 +24,7 @@ const About = () => {
       title: "Web App",
       text: "Transforming ideas into exceptional web app experiences.",
       img: theme === "dark" ? app : appL,
-    }, 
+    },
     {
       title: "Design & Creative",
       text: "Crafting visually stunning designs that connect with your audience.",
